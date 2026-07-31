@@ -45,7 +45,7 @@ const defaultServices: Service[] = [
     price: 1500,
     duration: 60,
     description: 'A deep conditioning wash, thermal blowout, and flat iron press that leaves hair silky, bouncy, and shiny.',
-    image: '/src/assets/images/african_silk_press_1785327747183.jpg'
+    image: '/images/african_silk_press_1785327747183.jpg'
   },
   {
     id: 's-2',
@@ -54,7 +54,7 @@ const defaultServices: Service[] = [
     price: 1400,
     duration: 180,
     description: 'Lightweight, tension-free braids starting directly from your natural hair for a seamless look. Lasts 6-8 weeks.',
-    image: '/src/assets/images/knotless_braids_1784461356341.jpg'
+    image: '/images/knotless_braids_1784461356341.jpg'
   },
   {
     id: 's-3',
@@ -63,7 +63,7 @@ const defaultServices: Service[] = [
     price: 2800,
     duration: 150,
     description: 'Bohemian-textured faux locs styled with unique, bubbly distress patterns for a beautiful rustic look.',
-    image: '/src/assets/images/butterfly_locs_1784461341414.jpg'
+    image: '/images/butterfly_locs_1784461341414.jpg'
   },
   {
     id: 's-4',
@@ -72,7 +72,7 @@ const defaultServices: Service[] = [
     price: 1700,
     duration: 120,
     description: 'Exquisite traditional braided patterns adorned with beads, shells, and rings, paired with a gorgeous afro volume.',
-    image: '/src/assets/images/fulani_braids_afro_1784461381991.jpg'
+    image: '/images/fulani_braids_afro_1784461381991.jpg'
   },
   {
     id: 's-5',
@@ -81,7 +81,7 @@ const defaultServices: Service[] = [
     price: 800,
     duration: 60,
     description: 'Elegant pink French tips on professional acrylics, decorated with hand-painted red cherry blossom flowers with gold accents.',
-    image: '/src/assets/images/pink_flower_nails_1784461367686.jpg'
+    image: '/images/pink_flower_nails_1784461367686.jpg'
   },
   {
     id: 's-6',
@@ -108,7 +108,7 @@ const defaultServices: Service[] = [
     price: 4500,
     duration: 60,
     description: 'Deep suction vacuum pore extraction, custom micro-exfoliation peel, and high-pressure antioxidant infusion.',
-    image: '/src/assets/images/african_hydrafacial_glow_1785327761616.jpg'
+    image: '/images/african_hydrafacial_glow_1785327761616.jpg'
   },
   {
     id: 's-9',
@@ -126,7 +126,7 @@ const defaultServices: Service[] = [
     price: 500,
     duration: 45,
     description: 'Seamless skin-match foundation, light eye detailing, elegant lashes, and setting spray for a perfect clean finish.',
-    image: '/src/assets/images/african_soft_glam_1785327776930.jpg'
+    image: '/images/african_soft_glam_1785327776930.jpg'
   },
   {
     id: 's-11',
@@ -166,7 +166,7 @@ At Mresh Salon, our stylists use advanced thermal guards and deep hydration proc
 Follow these tips and enjoy 2-3 weeks of premium silk press bounce!`,
     category: 'Hair Care',
     author: 'Faith Mresh (Founder)',
-    image: '/src/assets/images/african_silk_press_1785327747183.jpg',
+    image: '/images/african_silk_press_1785327747183.jpg',
     readTime: '3 min read',
     createdAt: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString()
   },
@@ -194,7 +194,7 @@ The answer depends on your natural nails, your daily habits, and your aesthetic 
 If your nails are brittle and you want to grow them out, go with a **BIAB (Builder in a Bottle) Gel Overlay**. If you love long, fierce, stiletto or coffin nails, **Sculpted Acrylics** are your best friend. Book an appointment today and let our nail experts design your perfect set!`,
     category: 'Nail Art',
     author: 'Joy Wambui (Nail Master)',
-    image: '/src/assets/images/pink_flower_nails_1784461367686.jpg',
+    image: '/images/pink_flower_nails_1784461367686.jpg',
     readTime: '4 min read',
     createdAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()
   },
@@ -217,7 +217,7 @@ Everyone! Whether you are dealing with oily skin, enlarged pores, dry patches, o
 We recommend booking a session once a month to build a perfect, radiant skin barrier!`,
     category: 'Skin Wellness',
     author: 'Dr. Anita Mwangi (Esthetician)',
-    image: '/src/assets/images/african_hydrafacial_glow_1785327761616.jpg',
+    image: '/images/african_hydrafacial_glow_1785327761616.jpg',
     readTime: '3 min read',
     createdAt: new Date(Date.now() - 12 * 24 * 60 * 60 * 1000).toISOString()
   }
@@ -265,16 +265,20 @@ export function initDb() {
   if (fs.existsSync(DB_FILE)) {
     try {
       const data = fs.readFileSync(DB_FILE, 'utf8');
+      if (!data || !data.trim()) {
+        seedDatabase();
+        return;
+      }
       dbCache = JSON.parse(data);
       console.log('Database loaded successfully from disk.');
       if (!dbCache.gallery) {
         dbCache.gallery = [
-          { id: 'g-1', title: 'Signature Butterfly Locs', category: 'Hair Styling', image: '/src/assets/images/butterfly_locs_1784461341414.jpg', createdAt: new Date().toISOString() },
-          { id: 'g-2', title: 'Chic Knotless Box Braids', category: 'Hair Styling', image: '/src/assets/images/knotless_braids_1784461356341.jpg', createdAt: new Date().toISOString() },
-          { id: 'g-3', title: 'Fulani Tribal Braids & Afro', category: 'Hair Styling', image: '/src/assets/images/fulani_braids_afro_1784461381991.jpg', createdAt: new Date().toISOString() },
-          { id: 'g-4', title: 'French-Tip Floral Acrylics', category: 'Nail Artistry', image: '/src/assets/images/pink_flower_nails_1784461367686.jpg', createdAt: new Date().toISOString() },
-          { id: 'g-5', title: 'Brightening Hydrafacial Session', category: 'Skin Wellness', image: '/src/assets/images/african_hydrafacial_glow_1785327761616.jpg', createdAt: new Date().toISOString() },
-          { id: 'g-6', title: 'Signature Soft Glam Makeup', category: 'Premium Makeup', image: '/src/assets/images/african_soft_glam_1785327776930.jpg', createdAt: new Date().toISOString() }
+          { id: 'g-1', title: 'Signature Butterfly Locs', category: 'Hair Styling', image: '/images/butterfly_locs_1784461341414.jpg', createdAt: new Date().toISOString() },
+          { id: 'g-2', title: 'Chic Knotless Box Braids', category: 'Hair Styling', image: '/images/knotless_braids_1784461356341.jpg', createdAt: new Date().toISOString() },
+          { id: 'g-3', title: 'Fulani Tribal Braids & Afro', category: 'Hair Styling', image: '/images/fulani_braids_afro_1784461381991.jpg', createdAt: new Date().toISOString() },
+          { id: 'g-4', title: 'French-Tip Floral Acrylics', category: 'Nail Artistry', image: '/images/pink_flower_nails_1784461367686.jpg', createdAt: new Date().toISOString() },
+          { id: 'g-5', title: 'Brightening Hydrafacial Session', category: 'Skin Wellness', image: '/images/african_hydrafacial_glow_1785327761616.jpg', createdAt: new Date().toISOString() },
+          { id: 'g-6', title: 'Signature Soft Glam Makeup', category: 'Premium Makeup', image: '/images/african_soft_glam_1785327776930.jpg', createdAt: new Date().toISOString() }
         ];
         writeDb();
       }
@@ -324,13 +328,17 @@ export function initDb() {
       }
     } catch (e) {
       console.error('Error loading database, resetting...', e);
-      writeDb();
+      seedDatabase();
     }
   } else {
-    // Seed database
-    console.log('Database file not found. Seeding initial records...');
-    const hashedAdminPassword = bcrypt.hashSync('admin', 10);
-    const hashedClientPassword = bcrypt.hashSync('daniel', 10);
+    seedDatabase();
+  }
+}
+
+function seedDatabase() {
+  console.log('Database file not found or empty. Seeding initial records...');
+  const hashedAdminPassword = bcrypt.hashSync('admin', 10);
+  const hashedClientPassword = bcrypt.hashSync('daniel', 10);
 
     dbCache.users = [
       {
@@ -474,16 +482,15 @@ export function initDb() {
     ];
 
     dbCache.gallery = [
-      { id: 'g-1', title: 'Signature Butterfly Locs', category: 'Hair Styling', image: '/src/assets/images/butterfly_locs_1784461341414.jpg', createdAt: new Date().toISOString() },
-      { id: 'g-2', title: 'Chic Knotless Box Braids', category: 'Hair Styling', image: '/src/assets/images/knotless_braids_1784461356341.jpg', createdAt: new Date().toISOString() },
-      { id: 'g-3', title: 'Fulani Tribal Braids & Afro', category: 'Hair Styling', image: '/src/assets/images/fulani_braids_afro_1784461381991.jpg', createdAt: new Date().toISOString() },
-      { id: 'g-4', title: 'French-Tip Floral Acrylics', category: 'Nail Artistry', image: '/src/assets/images/pink_flower_nails_1784461367686.jpg', createdAt: new Date().toISOString() },
-      { id: 'g-5', title: 'Brightening Hydrafacial Session', category: 'Skin Wellness', image: '/src/assets/images/african_hydrafacial_glow_1785327761616.jpg', createdAt: new Date().toISOString() },
-      { id: 'g-6', title: 'Signature Soft Glam Makeup', category: 'Premium Makeup', image: '/src/assets/images/african_soft_glam_1785327776930.jpg', createdAt: new Date().toISOString() }
+      { id: 'g-1', title: 'Signature Butterfly Locs', category: 'Hair Styling', image: '/images/butterfly_locs_1784461341414.jpg', createdAt: new Date().toISOString() },
+      { id: 'g-2', title: 'Chic Knotless Box Braids', category: 'Hair Styling', image: '/images/knotless_braids_1784461356341.jpg', createdAt: new Date().toISOString() },
+      { id: 'g-3', title: 'Fulani Tribal Braids & Afro', category: 'Hair Styling', image: '/images/fulani_braids_afro_1784461381991.jpg', createdAt: new Date().toISOString() },
+      { id: 'g-4', title: 'French-Tip Floral Acrylics', category: 'Nail Artistry', image: '/images/pink_flower_nails_1784461367686.jpg', createdAt: new Date().toISOString() },
+      { id: 'g-5', title: 'Brightening Hydrafacial Session', category: 'Skin Wellness', image: '/images/african_hydrafacial_glow_1785327761616.jpg', createdAt: new Date().toISOString() },
+      { id: 'g-6', title: 'Signature Soft Glam Makeup', category: 'Premium Makeup', image: '/images/african_soft_glam_1785327776930.jpg', createdAt: new Date().toISOString() }
     ];
 
-    writeDb();
-  }
+  writeDb();
 }
 
 function writeDb() {

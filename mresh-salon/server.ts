@@ -168,7 +168,6 @@ async function startServer() {
 
   app.use(cors({ origin: true, credentials: true }));
   app.use(express.json());
-  app.use('/src/assets/images', express.static(path.join(process.cwd(), 'src/assets/images')));
 
   // Simple Request Logging Middleware for User Activity Logs
   app.use((req, res, next) => {
