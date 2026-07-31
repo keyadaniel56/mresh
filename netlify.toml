@@ -1,5 +1,6 @@
 # Netlify Configuration File
 [build]
+  base = "mresh-salon"
   command = "npm run build:client"
   publish = "dist"
 
