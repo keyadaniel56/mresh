@@ -25,8 +25,8 @@ export default function BeforeAfter() {
       title: 'Thermic Silk Press Revival',
       beforeDesc: 'Dry, tightly coiled natural 4C textures prone to severe shrinkage and moisture loss.',
       afterDesc: 'Glass-like bounce, completely flat-ironed with a thermal protective barrier without heat damage.',
-      beforeImg: '/src/assets/images/black_lady_before_treatment_1785418007402.jpg', // Natural 4C afro texture Black lady before silk press
-      afterImg: '/src/assets/images/african_silk_press_1785327747183.jpg', // Sleek silk press straight
+      beforeImg: '/images/black_lady_before_treatment_1785418007402.jpg', // Natural 4C afro texture Black lady before silk press
+      afterImg: '/images/african_silk_press_1785327747183.jpg', // Sleek silk press straight
       stylist: 'Faith Mresh',
       technique: 'Silk Press & Organic Thermal Seal'
     },
@@ -37,7 +37,7 @@ export default function BeforeAfter() {
       beforeDesc: 'Uneven nail beds, broken edges and brittle natural nails resulting from frequent stress.',
       afterDesc: 'Elongated, sturdy coffin extensions decorated with hand-painted floral art and custom tips.',
       beforeImg: 'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=600', // Natural nails
-      afterImg: '/src/assets/images/pink_flower_nails_1784461367686.jpg', // Pink floral acrylic extensions
+      afterImg: '/images/pink_flower_nails_1784461367686.jpg', // Pink floral acrylic extensions
       stylist: 'Joy Wambui',
       technique: 'Form-Sculpted Acrylics & Hand Paint'
     },
@@ -47,8 +47,8 @@ export default function BeforeAfter() {
       title: 'Vortex-Suction Hydrafacial',
       beforeDesc: 'Clogged blackheads, dry patch lines and severe surface congestion from dust and pollution.',
       afterDesc: 'Saturated glass-skin clarity with clean pores, intensive deep hydration and high-potency Vitamin serums.',
-      beforeImg: '/src/assets/images/black_lady_facial_before_1785418025464.jpg', // Natural bare skin Black lady before hydrafacial
-      afterImg: '/src/assets/images/african_hydrafacial_glow_1785327761616.jpg', // Glowing hydrafacial result
+      beforeImg: '/images/black_lady_facial_before_1785418025464.jpg', // Natural bare skin Black lady before hydrafacial
+      afterImg: '/images/african_hydrafacial_glow_1785327761616.jpg', // Glowing hydrafacial result
       stylist: 'Dr. Anita Mwangi',
       technique: 'Vortex Deep Extraction & Serum Infusion'
     }

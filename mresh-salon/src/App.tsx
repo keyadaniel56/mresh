@@ -128,27 +128,27 @@ export default function App() {
 
   const heroSlides = [
     {
-      img: '/src/assets/images/african_silk_press_1785327747183.jpg',
+      img: '/images/african_silk_press_1785327747183.jpg',
       title: 'Luxury Silk Press & Blowout',
       subtitle: 'Glass-like bounce and thermal shine protection'
     },
     {
-      img: '/src/assets/images/butterfly_locs_1784461341414.jpg',
+      img: '/images/butterfly_locs_1784461341414.jpg',
       title: 'Signature Butterfly Locs',
       subtitle: 'Bohemian-textured distressed faux locs'
     },
     {
-      img: '/src/assets/images/knotless_braids_1784461356341.jpg',
+      img: '/images/knotless_braids_1784461356341.jpg',
       title: 'Knotless Box Braids',
       subtitle: 'Tension-free, featherlight parting perfection'
     },
     {
-      img: '/src/assets/images/fulani_braids_afro_1784461381991.jpg',
+      img: '/images/fulani_braids_afro_1784461381991.jpg',
       title: 'Fulani Tribal Braids',
       subtitle: 'Adorned with gorgeous shells and beads'
     },
     {
-      img: '/src/assets/images/pink_flower_nails_1784461367686.jpg',
+      img: '/images/pink_flower_nails_1784461367686.jpg',
       title: 'French-Tip Floral Nails',
       subtitle: 'Elegant hand-painted pink cherry blossom acrylics'
     }

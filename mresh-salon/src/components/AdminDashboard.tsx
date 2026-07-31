@@ -1514,12 +1514,12 @@ export default function AdminDashboard({ token, services, onRefreshGallery, onRe
                 {/* Quick Presets for Treatment Images */}
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {[
-                    { label: '+ Silk Press', url: '/src/assets/images/african_silk_press_1785327747183.jpg' },
-                    { label: '+ Knotless Braids', url: '/src/assets/images/knotless_braids_1784461356341.jpg' },
-                    { label: '+ Butterfly Locs', url: '/src/assets/images/butterfly_locs_1784461341414.jpg' },
-                    { label: '+ Acrylic Nails', url: '/src/assets/images/pink_flower_nails_1784461367686.jpg' },
-                    { label: '+ Hydrafacial', url: '/src/assets/images/african_hydrafacial_glow_1785327761616.jpg' },
-                    { label: '+ Soft Glam', url: '/src/assets/images/african_soft_glam_1785327776930.jpg' }
+                    { label: '+ Silk Press', url: '/images/african_silk_press_1785327747183.jpg' },
+                    { label: '+ Knotless Braids', url: '/images/knotless_braids_1784461356341.jpg' },
+                    { label: '+ Butterfly Locs', url: '/images/butterfly_locs_1784461341414.jpg' },
+                    { label: '+ Acrylic Nails', url: '/images/pink_flower_nails_1784461367686.jpg' },
+                    { label: '+ Hydrafacial', url: '/images/african_hydrafacial_glow_1785327761616.jpg' },
+                    { label: '+ Soft Glam', url: '/images/african_soft_glam_1785327776930.jpg' }
                   ].map((preset, idx) => (
                     <button
                       key={idx}

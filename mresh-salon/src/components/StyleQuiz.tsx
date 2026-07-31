@@ -51,7 +51,7 @@ export default function StyleQuiz({ onBookRecommended, isAdmin }: StyleQuizProps
         return {
           title: 'Fulani Tribal Braids & Afro',
           desc: 'Adorned with gorgeous shells, beads, and authentic Bohemian parts.',
-          image: '/src/assets/images/fulani_braids_afro_1784461381991.jpg',
+          image: '/images/fulani_braids_afro_1784461381991.jpg',
           price: 'KES 3,500',
           match: '98% Style Match'
         };
@@ -60,7 +60,7 @@ export default function StyleQuiz({ onBookRecommended, isAdmin }: StyleQuizProps
         return {
           title: 'Signature Butterfly Locs',
           desc: 'Distressed Bohemian texture designed to hold body, bounce, and attitude.',
-          image: '/src/assets/images/butterfly_locs_1784461341414.jpg',
+          image: '/images/butterfly_locs_1784461341414.jpg',
           price: 'KES 2,800',
           match: '95% Style Match'
         };
@@ -68,7 +68,7 @@ export default function StyleQuiz({ onBookRecommended, isAdmin }: StyleQuizProps
       return {
         title: 'Chic Knotless Box Braids',
         desc: 'Tension-free, pristine parts with a sleek and lightweight natural weight.',
-        image: '/src/assets/images/knotless_braids_1784461356341.jpg',
+        image: '/images/knotless_braids_1784461356341.jpg',
         price: 'KES 1,400',
         match: '92% Style Match'
       };
@@ -77,7 +77,7 @@ export default function StyleQuiz({ onBookRecommended, isAdmin }: StyleQuizProps
         return {
           title: 'French-Tip Floral Acrylics',
           desc: 'Elegant, hand-painted floral details paired with standard crisp French lines.',
-          image: '/src/assets/images/pink_flower_nails_1784461367686.jpg',
+          image: '/images/pink_flower_nails_1784461367686.jpg',
           price: 'KES 1,000',
           match: '96% Style Match'
         };
