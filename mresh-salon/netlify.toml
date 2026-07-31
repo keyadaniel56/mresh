@@ -1,0 +1,13 @@
+# Netlify Configuration File
+[build]
+  command = "npm run build:client"
+  publish = "dist"
+
+# Single Page Application (SPA) Routing Rule
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  NODE_VERSION = "20"

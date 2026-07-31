@@ -1,0 +1,6 @@
+{
+  "name": "Mresh Salon",
+  "description": "A full-featured premium salon platform for Mresh Salon, featuring interactive online booking, customer reviews, a visual gallery, real-time AI customer support chat, and integrated Safaricom M-Pesa Daraja payment simulation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
